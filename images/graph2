@@ -1,0 +1,20 @@
+// computation graph
+digraph {
+	4361666096 [label="id=<built-in function id> | data=0.995 | grad=1.000" shape=record]
+	"4361666096tanh" [label=tanh]
+	"4361666096tanh" -> 4361666096
+	4361665904 [label="id=<built-in function id> | data=3.000 | grad=0.010" shape=record]
+	"4361665904*" [label="*"]
+	"4361665904*" -> 4361665904
+	4361665664 [label="id=<built-in function id> | data=1.000 | grad=0.030" shape=record]
+	"4361665664+" [label="+"]
+	"4361665664+" -> 4361665664
+	4350624016 [label="id=<built-in function id> | data=-1.000 | grad=0.030" shape=record]
+	4350624016 -> "4361665664+"
+	4350624208 [label="id=<built-in function id> | data=2.000 | grad=0.030" shape=record]
+	4350624208 -> "4361665664+"
+	4361665664 -> "4361665904*"
+	4361665712 [label="id=<built-in function id> | data=3.000 | grad=0.010" shape=record]
+	4361665712 -> "4361665904*"
+	4361665904 -> "4361666096tanh"
+}
